@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">My ApplicationEbizz</string>
+    <string name="no_internet">Check Your Internet Connection.!!</string>
+    <string name="search" />
+
+    <string name="user_list">UserList</string>
+    <string name="user_details">User Details</string>
+
+    <string name="category">category</string>
+    <string name="price">Price</string>
+    <string name="name">Name</string>
+    <string name="following_121">following:121</string>
+    <string name="followers_11">followers:11</string>
+    <string name="name_jone">name:Jone</string>
+    <string name="save">Save</string>
+    <string name="blog_www_apple_com">Blog:www.apple.com</string>
+    <string name="company_apple">company:Apple</string>
+
+
+
+</resources>
