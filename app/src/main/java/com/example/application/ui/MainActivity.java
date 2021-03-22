@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(activity, "No Internet Connection!", Toast.LENGTH_LONG).show();
         }
-        
+
         search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

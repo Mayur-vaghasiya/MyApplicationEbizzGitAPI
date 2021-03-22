@@ -41,7 +41,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     private String loginId = "";
     private User user;
     private AppCompatImageView imageViewUser;
-    private AppCompatTextView textviewUserName, textviewUserCompany, textviewUserBlog, textviewsave;
+    private AppCompatTextView textviewUserName,textviewUserFolowers,textviewUserFollowing, textviewUserCompany, textviewUserBlog, textviewsave;
     private AppCompatEditText edittextNotes;
     private AppDatabase database;
     @Override
@@ -74,6 +74,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         txtHeaderNname.setText(getString(R.string.user_details));
         database = AppDatabase.getDatabaseInstance(this);
         imageViewUser = findViewById(R.id.imageViewUser);
+        textviewUserFolowers = findViewById(R.id.textviewUserFolowers);
+        textviewUserFollowing = findViewById(R.id.textviewUserFollowing);
         textviewUserName = findViewById(R.id.textviewUserName);
         textviewUserCompany = findViewById(R.id.textviewUserCompany);
         textviewUserBlog = findViewById(R.id.textviewUserBlog);
@@ -111,6 +113,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                         .circleCrop()
                         .into(imageViewUser);
 
+                textviewUserFollowing.setText("Name: ".concat(String.valueOf(user.getFollowing())));
+                textviewUserFolowers.setText("Name: ".concat(String.valueOf(user.getFollowers())));
                 textviewUserName.setText("Name: ".concat(user.getName().trim()));
                 textviewUserBlog.setText("Blog: ".concat(user.getBlog().trim()));
                 textviewUserCompany.setText("Company: ".concat(user.getCompany().trim()));
